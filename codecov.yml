@@ -1,11 +1,9 @@
 codecov:
-  notify:
-    after_n_builds: 2
 
 coverage:
   status:
     project:
-      default: off
+      default: on
       unittest:
         flags: unittest
         target: 85%
