@@ -17,6 +17,7 @@ jobs:
         with:
             flags: unittests # optional
             files: ./codecov.yml
+            github_checks: true
             name: codecov-umbrella # optional
             fail_ci_if_error: true # optional (default = false)
             verbose: true # optional (default = false)
