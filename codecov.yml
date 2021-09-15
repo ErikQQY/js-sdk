@@ -1,0 +1,20 @@
+codecov:
+
+coverage:
+  status:
+    project:
+      default: on
+      unittest:
+        flags: unittest
+        target: 85%
+      featuretest:
+        flags: featuretest
+flags:
+  unittest:
+    # only test unittests
+    paths:
+      - Tests/
+  featuretest:
+    # only test featuretest
+    paths:
+      - feature-test/
