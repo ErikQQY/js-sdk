@@ -1,0 +1,45 @@
+{
+  "name": "casdoor-js-sdk",
+  "version": "0.0.2",
+  "description": "Javascript client SDK for Casdoor",
+  "main": "lib/cjs/index.js",
+  "typings": "lib/cjs/index.d.ts",
+  "module": "lib/esm/index.js",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "run-s clean && run-p build:*",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "clean": "rimraf lib"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.3.5",
+    "rimraf": "^3.0.2"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "auth",
+    "authn",
+    "authentication",
+    "sso",
+    "oauth",
+    "oidc",
+    "casbin",
+    "casdoor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/casdoor/casdoor-js-sdk.git"
+  },
+  "author": {
+    "name": "Zxilly",
+    "email": "zxilly@outlook.com"
+  },
+  "bugs": {
+    "url": "https://github.com/casdoor/casdoor-js-sdk/issues"
+  },
+  "homepage": "https://github.com/casdoor/casdoor-js-sdk"
+}
