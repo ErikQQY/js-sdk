@@ -13,3 +13,6 @@ jobs:
           node-version: '14.17.0'
       - run: yarn install && CI=false yarn run build
         working-directory: ./
+      - uses: codecov/codecov-action@@v2.1.0
+        with:
+          file: ./codecov.yml
