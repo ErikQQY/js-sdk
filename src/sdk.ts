@@ -107,7 +107,8 @@ class Sdk {
         let width = 550, height = 620;
         let top = window.screenY + document.body.clientHeight / 2 - height / 2;
         let left = window.screenX + document.body.clientWidth / 2 - width / 2;
-
+           
+        
         let popupWindow = window.open(url, "Casdoor Signin", `width=${width}, height=${height}, left=${left}, top=${top}`);
         let checkWindowClosed = setInterval(() => {
             if (popupWindow === null || popupWindow.closed) {
