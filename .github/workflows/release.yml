@@ -11,7 +11,7 @@ jobs:
 
       - name: Run semantic-release
         if: github.event_name == 'push' && github.repository == 'ErikQQY/qqy-js-sdk'
-        run: npx -p semantic-release -p @semantic-release/git -p @semantic-release/changelog -p @semantic-release/commit-analyzer -p @semantic-release/release-notes-generator -p @semantic-release/release-notes-generator -p @semantic-release/changelog -p @semantic-release/git -p @semantic-release/github semantic-release
+        run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
