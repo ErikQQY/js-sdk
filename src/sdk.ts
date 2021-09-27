@@ -95,13 +95,6 @@ class Sdk {
         }
     }
 
-    public signup(method: string, callbackFn?: () => void) {
-        if (method === "redirect") {
-            window.location.href = this.getSignupUrl();
-        } else if (method === "popup" && callbackFn !== undefined) {
-            this.popupCasdoorWindow(this.getSignupUrl(), callbackFn);
-        }
-    }
 
     public popupCasdoorWindow(url: string, callbackFn: () => void) {
         let width = 550, height = 620;
@@ -117,6 +110,14 @@ class Sdk {
             }
         }, 100);
         localStorage.setItem("Casdoor-popup", "true");
+    }
+    
+        public signup(method: string, callbackFn?: () => void) {
+        if (method === "redirect") {
+            window.location.href = this.getSignupUrl();
+        } else if (method === "popup" && callbackFn !== undefined) {
+            this.popupCasdoorWindow(this.getSignupUrl(), callbackFn);
+        }
     }
 }
 
