@@ -1,6 +1,6 @@
 {
   "name": "qqy-js-sdk",
-  "version": "0.0.4",
+  "version": "1.1.0",
   "description": "Javascript client SDK for Casdoor",
   "main": "lib/cjs/index.js",
   "typings": "lib/cjs/index.d.ts",
