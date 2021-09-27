@@ -28,7 +28,8 @@
     "oauth",
     "oidc",
     "casbin",
-    "casdoor"
+    "casdoor",
+    "test"
   ],
   "repository": {
     "type": "git",
