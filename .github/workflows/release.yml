@@ -8,10 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - name: Run semantic-release
-        if: github.event_name == 'push' && github.repository == 'ErikQQY/qqy-js-sdk'
-        run: yarn publish && npx semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - uses: actions/setup-node@v2
+          with:
+              node-version: '12.x'
+              registry-url: 'https://registry.npmjs.org'
+          -run: npm install
+          -run: npx semantic release
+            env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
